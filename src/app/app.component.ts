@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import { correctHeight, detectBody } from './app.helpers';
 
-import { ApiService } from './shared';
-
-import '../style/app.scss';
+declare var jQuery:any;
 
 @Component({
-  selector: 'my-app', // <my-app></my-app>
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app',
+  templateUrl: 'app.component.html'
 })
-export class AppComponent {
-  url = 'https://github.com/preboot/angular2-webpack';
 
-  constructor(private api: ApiService) {
-    // Do something with api
-  }
+export class AppComponent {
+
+    ngAfterViewInit() {
+        // Run correctHeight function on load and resize window event
+        jQuery(window).bind("load resize", function() {
+            correctHeight();
+            detectBody();
+        });
+
+        // Correct height of wrapper after metisMenu animation.
+        jQuery('.metismenu a').click(() => {
+            setTimeout(() => {
+                correctHeight();
+            }, 300)
+        });
+    }
+
 }
