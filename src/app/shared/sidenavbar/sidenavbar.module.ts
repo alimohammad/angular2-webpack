@@ -1,7 +1,7 @@
-import {NgModule} from "@angular/core";
-import {BrowserModule} from "@angular/platform-browser";
-import {RouterModule} from "@angular/router";
-import {SideNavbarComponent} from "./sidenavbar.component";
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
+import {SideNavbarComponent} from './sidenavbar.component';
 
 @NgModule({
     declarations: [SideNavbarComponent],

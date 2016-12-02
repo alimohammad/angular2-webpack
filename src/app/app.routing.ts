@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { PropertyComponent } from './property/property.component';
 
 export const ROUTES: Routes = [
   // App Views
-  { path: '', component: HomeComponent },
-  {path: 'home',    component: HomeComponent },
-
-  // Handle all other routes
-  {path: '**',    component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'property', component: PropertyComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

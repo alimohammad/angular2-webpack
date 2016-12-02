@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { HomeComponent } from './home.component';
+import { PropertyComponent } from './property.component';
 
 @NgModule({
   imports: [CommonModule, SharedModule],
-  declarations: [HomeComponent],
-  exports: [HomeComponent],
+  declarations: [PropertyComponent],
+  exports: [PropertyComponent],
   //providers: [NameListService]
 })
-export class HomeModule { }
-
+export class PropertyModule { }
