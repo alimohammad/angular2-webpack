@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { correctHeight, detectBody } from './app.helpers';
+import * as inspinia from './app.helpers';
 
 declare var jQuery: any;
 
@@ -13,16 +13,19 @@ export class AppComponent implements AfterViewInit {
     ngAfterViewInit() {
         // Run correctHeight function on load and resize window event
         jQuery(window).bind('load resize', function() {
-            correctHeight();
-            detectBody();
+            inspinia.correctHeight();
+            inspinia.detectBody();
         });
 
         // Correct height of wrapper after metisMenu animation.
         jQuery('.metismenu a').click(() => {
             setTimeout(() => {
-                correctHeight();
+                inspinia.correctHeight();
             }, 300);
         });
+
+        inspinia.metisMenu();
+        inspinia.slimScroll();
     }
 }
 
