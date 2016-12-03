@@ -5,6 +5,10 @@ export const PropertyRoutes: Route[] = [
   {
     path: '',
     component: PropertyComponent
+  },
+  {
+    path: '/property/add',
+    component: PropertyComponent
   }
 ];
 

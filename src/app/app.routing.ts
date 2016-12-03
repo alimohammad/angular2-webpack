@@ -7,6 +7,7 @@ export const ROUTES: Routes = [
   // App Views
   { path: 'home', component: HomeComponent },
   { path: 'property', component: PropertyComponent },
+  { path: 'property/add', component: PropertyComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

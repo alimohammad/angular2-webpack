@@ -1,12 +1,3 @@
-/*
- * Inspinia js helpers:
- *
- * correctHeight() - fix the height of main wrapper
- * detectBody() - detect windows size
- * smoothlyMenu() - add smooth fade in/out on navigation show/ide
- *
-*/
-
 declare const jQuery: any;
 
 export function initializeInspinia() {

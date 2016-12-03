@@ -1,11 +1,14 @@
 import { Component, AfterViewInit } from '@angular/core';
 import * as inspinia from './app.helpers';
 
+import { PropertyService } from './services/property.service';
+
 declare var jQuery: any;
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  providers: [PropertyService]
 })
 
 export class AppComponent implements AfterViewInit {
